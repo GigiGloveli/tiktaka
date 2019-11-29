@@ -1,12 +1,12 @@
 package ge.msda.tictactoe
 
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
-import kotlin.collections.ArrayList
+import androidx.appcompat.app.AppCompatActivity
+
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -58,9 +58,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         button7?.setOnClickListener(this)
         button8?.setOnClickListener(this)
         button9?.setOnClickListener(this)
-
         resetButton?.setOnClickListener {
-
+            reset()
 
         }
 
@@ -100,7 +99,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             activePlayer = 2
         } else {
             clickedButton?.text = "O"
-            clickedButton?.setBackgroundColor(Color.YELLOW)
+            clickedButton?.setBackgroundColor(Color.GREEN)
             secondPlayer.add(buttonNumber)
             activePlayer = 1
         }
@@ -111,71 +110,264 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private fun check() {
 
         var winnerPlayer = 0
-
         if (firstPlayer.contains(1) && firstPlayer.contains(2) && firstPlayer.contains(3)) {
             winnerPlayer = 1
+            button1?.isEnabled = false
+            button2?.isEnabled = false
+            button3?.isEnabled = false
+            button4?.isEnabled = false
+            button5?.isEnabled = false
+            button6?.isEnabled = false
+            button7?.isEnabled = false
+            button8?.isEnabled = false
+            button9?.isEnabled = false
         }
         if (secondPlayer.contains(1) && secondPlayer.contains(2) && secondPlayer.contains(3)) {
             winnerPlayer = 2
+            button1?.isEnabled = false
+            button2?.isEnabled = false
+            button3?.isEnabled = false
+            button4?.isEnabled = false
+            button5?.isEnabled = false
+            button6?.isEnabled = false
+            button7?.isEnabled = false
+            button8?.isEnabled = false
+            button9?.isEnabled = false
         }
 
         if (firstPlayer.contains(4) && firstPlayer.contains(5) && firstPlayer.contains(6)) {
             winnerPlayer = 1
+            button1?.isEnabled = false
+            button2?.isEnabled = false
+            button3?.isEnabled = false
+            button4?.isEnabled = false
+            button5?.isEnabled = false
+            button6?.isEnabled = false
+            button7?.isEnabled = false
+            button8?.isEnabled = false
+            button9?.isEnabled = false
         }
         if (secondPlayer.contains(4) && secondPlayer.contains(5) && secondPlayer.contains(6)) {
             winnerPlayer = 2
+            button1?.isEnabled = false
+            button2?.isEnabled = false
+            button3?.isEnabled = false
+            button4?.isEnabled = false
+            button5?.isEnabled = false
+            button6?.isEnabled = false
+            button7?.isEnabled = false
+            button8?.isEnabled = false
+            button9?.isEnabled = false
         }
 
         if (firstPlayer.contains(7) && firstPlayer.contains(8) && firstPlayer.contains(9)) {
             winnerPlayer = 1
+            button1?.isEnabled = false
+            button2?.isEnabled = false
+            button3?.isEnabled = false
+            button4?.isEnabled = false
+            button5?.isEnabled = false
+            button6?.isEnabled = false
+            button7?.isEnabled = false
+            button8?.isEnabled = false
+            button9?.isEnabled = false
         }
         if (secondPlayer.contains(7) && secondPlayer.contains(8) && secondPlayer.contains(9)) {
             winnerPlayer = 2
+            button1?.isEnabled = false
+            button2?.isEnabled = false
+            button3?.isEnabled = false
+            button4?.isEnabled = false
+            button5?.isEnabled = false
+            button6?.isEnabled = false
+            button7?.isEnabled = false
+            button8?.isEnabled = false
+            button9?.isEnabled = false
         }
 
         if (firstPlayer.contains(1) && firstPlayer.contains(4) && firstPlayer.contains(7)) {
             winnerPlayer = 1
+            button1?.isEnabled = false
+            button2?.isEnabled = false
+            button3?.isEnabled = false
+            button4?.isEnabled = false
+            button5?.isEnabled = false
+            button6?.isEnabled = false
+            button7?.isEnabled = false
+            button8?.isEnabled = false
+            button9?.isEnabled = false
         }
         if (secondPlayer.contains(1) && secondPlayer.contains(4) && secondPlayer.contains(7)) {
             winnerPlayer = 2
+            button1?.isEnabled = false
+            button2?.isEnabled = false
+            button3?.isEnabled = false
+            button4?.isEnabled = false
+            button5?.isEnabled = false
+            button6?.isEnabled = false
+            button7?.isEnabled = false
+            button8?.isEnabled = false
+            button9?.isEnabled = false
         }
 
         if (firstPlayer.contains(2) && firstPlayer.contains(5) && firstPlayer.contains(8)) {
             winnerPlayer = 1
+            button1?.isEnabled = false
+            button2?.isEnabled = false
+            button3?.isEnabled = false
+            button4?.isEnabled = false
+            button5?.isEnabled = false
+            button6?.isEnabled = false
+            button7?.isEnabled = false
+            button8?.isEnabled = false
+            button9?.isEnabled = false
         }
         if (secondPlayer.contains(2) && secondPlayer.contains(5) && secondPlayer.contains(8)) {
             winnerPlayer = 2
+            button1?.isEnabled = false
+            button2?.isEnabled = false
+            button3?.isEnabled = false
+            button4?.isEnabled = false
+            button5?.isEnabled = false
+            button6?.isEnabled = false
+            button7?.isEnabled = false
+            button8?.isEnabled = false
+            button9?.isEnabled = false
         }
 
         if (firstPlayer.contains(3) && firstPlayer.contains(6) && firstPlayer.contains(9)) {
             winnerPlayer = 1
+            button1?.isEnabled = false
+            button2?.isEnabled = false
+            button3?.isEnabled = false
+            button4?.isEnabled = false
+            button5?.isEnabled = false
+            button6?.isEnabled = false
+            button7?.isEnabled = false
+            button8?.isEnabled = false
+            button9?.isEnabled = false
         }
         if (secondPlayer.contains(3) && secondPlayer.contains(6) && secondPlayer.contains(9)) {
             winnerPlayer = 2
+            button1?.isEnabled = false
+            button2?.isEnabled = false
+            button3?.isEnabled = false
+            button4?.isEnabled = false
+            button5?.isEnabled = false
+            button6?.isEnabled = false
+            button7?.isEnabled = false
+            button8?.isEnabled = false
+            button9?.isEnabled = false
         }
 
         if (firstPlayer.contains(1) && firstPlayer.contains(5) && firstPlayer.contains(9)) {
             winnerPlayer = 1
+            button1?.isEnabled = false
+            button2?.isEnabled = false
+            button3?.isEnabled = false
+            button4?.isEnabled = false
+            button5?.isEnabled = false
+            button6?.isEnabled = false
+            button7?.isEnabled = false
+            button8?.isEnabled = false
+            button9?.isEnabled = false
         }
         if (secondPlayer.contains(1) && secondPlayer.contains(5) && secondPlayer.contains(9)) {
             winnerPlayer = 2
+            button1?.isEnabled = false
+            button2?.isEnabled = false
+            button3?.isEnabled = false
+            button4?.isEnabled = false
+            button5?.isEnabled = false
+            button6?.isEnabled = false
+            button7?.isEnabled = false
+            button8?.isEnabled = false
+            button9?.isEnabled = false
         }
 
         if (firstPlayer.contains(3) && firstPlayer.contains(5) && firstPlayer.contains(7)) {
             winnerPlayer = 1
+            button1?.isEnabled = false
+            button2?.isEnabled = false
+            button3?.isEnabled = false
+            button4?.isEnabled = false
+            button5?.isEnabled = false
+            button6?.isEnabled = false
+            button7?.isEnabled = false
+            button8?.isEnabled = false
+            button9?.isEnabled = false
         }
         if (secondPlayer.contains(3) && secondPlayer.contains(5) && secondPlayer.contains(7)) {
             winnerPlayer = 2
+            button1?.isEnabled = false
+            button2?.isEnabled = false
+            button3?.isEnabled = false
+            button4?.isEnabled = false
+            button5?.isEnabled = false
+            button6?.isEnabled = false
+            button7?.isEnabled = false
+            button8?.isEnabled = false
+            button9?.isEnabled = false
         }
 
         if (winnerPlayer != 0) {
             if (winnerPlayer == 1) {
                 Toast.makeText(this, "X Wins!", Toast.LENGTH_SHORT).show()
-            } else {
+
+            } else if (winnerPlayer == 2) {
                 Toast.makeText(this, "O Wins!", Toast.LENGTH_SHORT).show()
             }
+        }
+        if (button1?.isEnabled == false &&
+            button2?.isEnabled == false &&
+            button3?.isEnabled == false &&
+            button4?.isEnabled == false &&
+            button5?.isEnabled == false &&
+            button6?.isEnabled == false &&
+            button7?.isEnabled == false &&
+            button8?.isEnabled == false &&
+            button9?.isEnabled == false && winnerPlayer == 0
+        ) {
+
+            Toast.makeText(this, "Tie!", Toast.LENGTH_LONG).show()
         }
 
     }
 
+    fun reset() {
+        button1?.setBackgroundResource(android.R.drawable.btn_default)
+        button2?.setBackgroundResource(android.R.drawable.btn_default)
+        button3?.setBackgroundResource(android.R.drawable.btn_default)
+        button4?.setBackgroundResource(android.R.drawable.btn_default)
+        button5?.setBackgroundResource(android.R.drawable.btn_default)
+        button6?.setBackgroundResource(android.R.drawable.btn_default)
+        button7?.setBackgroundResource(android.R.drawable.btn_default)
+        button8?.setBackgroundResource(android.R.drawable.btn_default)
+        button9?.setBackgroundResource(android.R.drawable.btn_default)
+
+        button1?.isEnabled = true
+        button2?.isEnabled = true
+        button3?.isEnabled = true
+        button4?.isEnabled = true
+        button5?.isEnabled = true
+        button6?.isEnabled = true
+        button7?.isEnabled = true
+        button8?.isEnabled = true
+        button9?.isEnabled = true
+
+        button1?.text = ""
+        button2?.text = ""
+        button3?.text = ""
+        button4?.text = ""
+        button5?.text = ""
+        button6?.text = ""
+        button7?.text = ""
+        button8?.text = ""
+        button9?.text = ""
+
+        firstPlayer.clear()
+        secondPlayer.clear()
+
+
+    }
 }
