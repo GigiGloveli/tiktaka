@@ -62,6 +62,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             reset()
 
         }
+        button1?.setBackgroundResource(android.R.drawable.btn_default)
+        button2?.setBackgroundResource(android.R.drawable.btn_default)
+        button3?.setBackgroundResource(android.R.drawable.btn_default)
+        button4?.setBackgroundResource(android.R.drawable.btn_default)
+        button5?.setBackgroundResource(android.R.drawable.btn_default)
+        button6?.setBackgroundResource(android.R.drawable.btn_default)
+        button7?.setBackgroundResource(android.R.drawable.btn_default)
+        button8?.setBackgroundResource(android.R.drawable.btn_default)
+        button9?.setBackgroundResource(android.R.drawable.btn_default)
 
     }
 
@@ -121,6 +130,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             button7?.isEnabled = false
             button8?.isEnabled = false
             button9?.isEnabled = false
+            activePlayer = 1
         }
         if (secondPlayer.contains(1) && secondPlayer.contains(2) && secondPlayer.contains(3)) {
             winnerPlayer = 2
@@ -133,6 +143,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             button7?.isEnabled = false
             button8?.isEnabled = false
             button9?.isEnabled = false
+            activePlayer = 1
         }
 
         if (firstPlayer.contains(4) && firstPlayer.contains(5) && firstPlayer.contains(6)) {
@@ -146,6 +157,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             button7?.isEnabled = false
             button8?.isEnabled = false
             button9?.isEnabled = false
+            activePlayer = 1
         }
         if (secondPlayer.contains(4) && secondPlayer.contains(5) && secondPlayer.contains(6)) {
             winnerPlayer = 2
@@ -158,6 +170,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             button7?.isEnabled = false
             button8?.isEnabled = false
             button9?.isEnabled = false
+            activePlayer = 1
         }
 
         if (firstPlayer.contains(7) && firstPlayer.contains(8) && firstPlayer.contains(9)) {
@@ -171,6 +184,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             button7?.isEnabled = false
             button8?.isEnabled = false
             button9?.isEnabled = false
+            activePlayer = 1
         }
         if (secondPlayer.contains(7) && secondPlayer.contains(8) && secondPlayer.contains(9)) {
             winnerPlayer = 2
@@ -183,6 +197,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             button7?.isEnabled = false
             button8?.isEnabled = false
             button9?.isEnabled = false
+            activePlayer = 1
         }
 
         if (firstPlayer.contains(1) && firstPlayer.contains(4) && firstPlayer.contains(7)) {
@@ -196,6 +211,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             button7?.isEnabled = false
             button8?.isEnabled = false
             button9?.isEnabled = false
+            activePlayer = 1
         }
         if (secondPlayer.contains(1) && secondPlayer.contains(4) && secondPlayer.contains(7)) {
             winnerPlayer = 2
@@ -208,6 +224,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             button7?.isEnabled = false
             button8?.isEnabled = false
             button9?.isEnabled = false
+            activePlayer = 1
         }
 
         if (firstPlayer.contains(2) && firstPlayer.contains(5) && firstPlayer.contains(8)) {
@@ -221,6 +238,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             button7?.isEnabled = false
             button8?.isEnabled = false
             button9?.isEnabled = false
+            activePlayer = 1
         }
         if (secondPlayer.contains(2) && secondPlayer.contains(5) && secondPlayer.contains(8)) {
             winnerPlayer = 2
@@ -233,6 +251,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             button7?.isEnabled = false
             button8?.isEnabled = false
             button9?.isEnabled = false
+            activePlayer = 1
         }
 
         if (firstPlayer.contains(3) && firstPlayer.contains(6) && firstPlayer.contains(9)) {
@@ -246,6 +265,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             button7?.isEnabled = false
             button8?.isEnabled = false
             button9?.isEnabled = false
+            activePlayer = 1
         }
         if (secondPlayer.contains(3) && secondPlayer.contains(6) && secondPlayer.contains(9)) {
             winnerPlayer = 2
@@ -258,6 +278,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             button7?.isEnabled = false
             button8?.isEnabled = false
             button9?.isEnabled = false
+            activePlayer = 1
         }
 
         if (firstPlayer.contains(1) && firstPlayer.contains(5) && firstPlayer.contains(9)) {
@@ -271,6 +292,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             button7?.isEnabled = false
             button8?.isEnabled = false
             button9?.isEnabled = false
+            activePlayer = 1
         }
         if (secondPlayer.contains(1) && secondPlayer.contains(5) && secondPlayer.contains(9)) {
             winnerPlayer = 2
@@ -283,6 +305,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             button7?.isEnabled = false
             button8?.isEnabled = false
             button9?.isEnabled = false
+            activePlayer = 1
         }
 
         if (firstPlayer.contains(3) && firstPlayer.contains(5) && firstPlayer.contains(7)) {
@@ -296,6 +319,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             button7?.isEnabled = false
             button8?.isEnabled = false
             button9?.isEnabled = false
+            activePlayer = 1
         }
         if (secondPlayer.contains(3) && secondPlayer.contains(5) && secondPlayer.contains(7)) {
             winnerPlayer = 2
@@ -308,6 +332,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             button7?.isEnabled = false
             button8?.isEnabled = false
             button9?.isEnabled = false
+            activePlayer = 1
         }
 
         if (winnerPlayer != 0) {
@@ -330,6 +355,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         ) {
 
             Toast.makeText(this, "Tie!", Toast.LENGTH_LONG).show()
+            activePlayer = 1
         }
 
     }
@@ -367,6 +393,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         firstPlayer.clear()
         secondPlayer.clear()
+        activePlayer = 1
+
 
 
     }
